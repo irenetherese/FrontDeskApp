@@ -1,2 +1,1 @@
-start publish\api\FrontDeskApp.Api.exe 
-start publish\app\FrontDeskApp.App.exe
+publish.bat && cd publish\api\ && start FrontDeskApp.Api.exe && cd ..\app\ && FrontDeskApp.App.exe & cd..\..
