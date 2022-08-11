@@ -1,8 +1,8 @@
-﻿using FrontDeskApp.Models;
+﻿using FrontDeskApp.Common.Models;
 using FrontDeskApp.Repositories;
-using FrontDeskApp.Requests;
-using FrontDeskApp.Responses;
-using FrontDeskApp.ViewModels;
+using FrontDeskApp.Common.Requests;
+using FrontDeskApp.Common.Responses;
+using FrontDeskApp.Common.ViewModels;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;

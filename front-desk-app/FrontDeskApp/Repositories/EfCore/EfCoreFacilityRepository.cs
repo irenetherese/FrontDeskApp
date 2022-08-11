@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using System;
 using System.Linq;
 using System.Linq.Expressions;
-using FrontDeskApp.Models;
+using FrontDeskApp.Common.Models;
 
 namespace FrontDeskApp.Repositories.EfCore
 {

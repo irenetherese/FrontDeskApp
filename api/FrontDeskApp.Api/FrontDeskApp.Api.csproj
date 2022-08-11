@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\front-desk-app\FrontDeskApp\FrontDeskApp.csproj" />
+    <ProjectReference Include="..\..\common\FrontDeskApp.Common\FrontDeskApp.Common.csproj" />
   </ItemGroup>
 
 </Project>

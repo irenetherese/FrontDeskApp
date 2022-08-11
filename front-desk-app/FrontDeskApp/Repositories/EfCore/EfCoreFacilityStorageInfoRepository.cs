@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Linq;
-using FrontDeskApp.Models;
+using FrontDeskApp.Common.Models;
 
 namespace FrontDeskApp.Repositories.EfCore
 {

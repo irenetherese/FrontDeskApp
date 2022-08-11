@@ -1,8 +1,8 @@
-﻿using FrontDeskApp.Models;
+﻿using FrontDeskApp.Common.Models;
 using FrontDeskApp.Repositories;
-using FrontDeskApp.Requests;
-using FrontDeskApp.Responses;
-using FrontDeskApp.ViewModels;
+using FrontDeskApp.Common.Requests;
+using FrontDeskApp.Common.Responses;
+using FrontDeskApp.Common.ViewModels;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -26,7 +26,8 @@ namespace FrontDeskApp.Services.Default
             var facilities = await _facilityRepository.GetAsync();
             var viewModels = facilities.Select(v => new FacilityViewModel
             {
-
+                Id = v.Id,
+                Name = v.Name
             });
 
             var response = new GetFacilitiesResponse
@@ -42,9 +43,11 @@ namespace FrontDeskApp.Services.Default
             var facility = await _facilityRepository.GetAsync(facilityId);
             var facilityStorageInfo = await _facilityStorageInfoRepository.GetAsync(facilityId);
 
-            var viewModel = new FacilityViewModel
+            var viewModel = new FacilityWithStorageInfoViewModel
             {
-
+                Id = facility.Id,
+                Name = facility.Name,
+                FacilityStorageInfo = facilityStorageInfo
             };
 
 

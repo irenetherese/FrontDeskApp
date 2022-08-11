@@ -1,5 +1,5 @@
 ﻿using FrontDeskApp;
-using FrontDeskApp.Models;
+using FrontDeskApp.Common.Models;
 using FrontDeskApp.Repositories;
 using FrontDeskApp.Repositories.EfCore;
 using FrontDeskApp.Services;
@@ -28,7 +28,7 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddScoped<ICustomerRepository, EfCoreCustomerRepository>();
             services.AddScoped<IFacilityRepository, EfCoreFacilityRepository>();
             services.AddScoped<IRecordRepository, EfCoreRecordRepository>();
-             services.AddScoped<IFacilityStorageInfoRepository, EfCoreFacilityStorageInfoRepository>();
+            services.AddScoped<IFacilityStorageInfoRepository, EfCoreFacilityStorageInfoRepository>();
 
             services.AddScoped<ICustomerService, DefaultCustomerService>();
             services.AddScoped<IFacilityService, DefaultFacilityService>();

@@ -1,4 +1,4 @@
-﻿using FrontDeskApp.Models;
+﻿using FrontDeskApp.Common.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
