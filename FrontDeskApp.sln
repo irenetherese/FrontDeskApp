@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "api", "api", "{74FB14BC-ACFD-4808-910A-0B41FA9B8078}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrontDeskApp.Api", "api\FrontDeskApp.Api\FrontDeskApp.Api.csproj", "{63993BD5-9FAA-49AD-AC07-3B0096D0A5FB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "front-desk-app", "front-desk-app", "{5C8DBCF0-B33C-40DA-A7E0-C4C1EC358EA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrontDeskApp", "front-desk-app\FrontDeskApp\FrontDeskApp.csproj", "{47C0AA9C-99CA-4FF0-B862-A9D51F0B35AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63993BD5-9FAA-49AD-AC07-3B0096D0A5FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63993BD5-9FAA-49AD-AC07-3B0096D0A5FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63993BD5-9FAA-49AD-AC07-3B0096D0A5FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63993BD5-9FAA-49AD-AC07-3B0096D0A5FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47C0AA9C-99CA-4FF0-B862-A9D51F0B35AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47C0AA9C-99CA-4FF0-B862-A9D51F0B35AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47C0AA9C-99CA-4FF0-B862-A9D51F0B35AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47C0AA9C-99CA-4FF0-B862-A9D51F0B35AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{63993BD5-9FAA-49AD-AC07-3B0096D0A5FB} = {74FB14BC-ACFD-4808-910A-0B41FA9B8078}
+		{47C0AA9C-99CA-4FF0-B862-A9D51F0B35AA} = {5C8DBCF0-B33C-40DA-A7E0-C4C1EC358EA0}
+	EndGlobalSection
+EndGlobal
