@@ -29,11 +29,12 @@ namespace FrontDeskApp.Services.Default
                 CustomerName = $"{v.Customer.FirstName} {v.Customer.LastName}",
                 FacilityId = v.FacilityId,
                 FacilityName = v.Facility.Name,
-                BoxType =  nameof(v.BoxType),
-                Status = nameof(v.Status),
+                BoxType =  v.BoxType.ToString(),
+                Status = v.Status.ToString(),
                 CreatedOn = v.CreatedOnUtc,
                 StoredOn = v.StoredOnUtc,
-                RetrievedOn = v.RetrievedOnUtc
+                RetrievedOn = v.RetrievedOnUtc,
+                Data = v.Data
             });
 
             var response = new GetRecordsResponse
@@ -54,11 +55,12 @@ namespace FrontDeskApp.Services.Default
                 CustomerName = $"{record.Customer.FirstName} {record.Customer.LastName}",
                 FacilityId = record.FacilityId,
                 FacilityName = record.Facility.Name,
-                BoxType = nameof(record.BoxType),
-                Status = nameof(record.Status),
+                BoxType = record.BoxType.ToString(),
+                Status = record.Status.ToString(),
                 CreatedOn = record.CreatedOnUtc,
                 StoredOn = record.StoredOnUtc,
-                RetrievedOn = record.RetrievedOnUtc
+                RetrievedOn = record.RetrievedOnUtc,
+                Data = record.Data
             };
 
             var response = new GetRecordResponse
@@ -79,7 +81,8 @@ namespace FrontDeskApp.Services.Default
                 Status = request.Status,
                 CreatedOnUtc = request.CreatedOnUtc,
                 StoredOnUtc = null,
-                RetrievedOnUtc = null
+                RetrievedOnUtc = null,
+                Data = request.Data
             };
 
             var id = await _recordRepository.CreateAsync(record);
@@ -101,7 +104,8 @@ namespace FrontDeskApp.Services.Default
                 Status = request.Status,
                 CreatedOnUtc = request.CreatedOnUtc,
                 StoredOnUtc = request.StoredOnUtc,
-                RetrievedOnUtc = request.RetrievedOnUtc
+                RetrievedOnUtc = request.RetrievedOnUtc,
+                Data = request.Data
             };
 
             await _recordRepository.UpdateAsync(record);

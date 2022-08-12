@@ -18,7 +18,7 @@ namespace FrontDeskApp.Repositories.EfCore
         public async Task<IEnumerable<FacilityStorageInfo>> GetAsync(int facilityId)
         {
             return await _database.FacilityStorageInfo
-                .Where(v => v.Id == facilityId)
+                .Where(v => v.FacilityId == facilityId)
                 .ToListAsync();
         }
     }

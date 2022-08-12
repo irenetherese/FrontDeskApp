@@ -1,3 +1,4 @@
+using System.Text;
 using System.Text.Json;
 using FrontDeskApp.Common.Models;
 using FrontDeskApp.Common.Requests;
@@ -26,7 +27,7 @@ namespace FrontDeskApp.App.Services
                 FirstName = customer.FirstName
             };
             
-            HttpResponseMessage response = await _httpClient.PostAsync($"api/customers/create", new StringContent(JsonConvert.SerializeObject(request)));
+            HttpResponseMessage response = await _httpClient.PostAsync($"api/customers/create", new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json"));
             response.EnsureSuccessStatusCode();
             string responseBody = await response.Content.ReadAsStringAsync();
             var responseObject = JsonConvert.DeserializeObject<CreateCustomerResponse>(responseBody);
@@ -41,10 +42,11 @@ namespace FrontDeskApp.App.Services
                 Status = record.Status,
                 BoxType = record.BoxType,
                 FacilityId = record.FacilityId,
-                CustomerId = record.CustomerId
+                CustomerId = record.CustomerId,
+                Data = record.Data
             };
             
-            HttpResponseMessage response = await _httpClient.PostAsync($"api/records/create", new StringContent(JsonConvert.SerializeObject(request)));
+            HttpResponseMessage response = await _httpClient.PostAsync($"api/records/create", new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json"));
             response.EnsureSuccessStatusCode();
             string responseBody = await response.Content.ReadAsStringAsync();
             var responseObject = JsonConvert.DeserializeObject<CreateRecordResponse>(responseBody);
@@ -84,7 +86,7 @@ namespace FrontDeskApp.App.Services
             return responseObject.Facilities;
         }
 
-        public async Task<FacilityViewModel> GetFacility(int id)
+        public async Task<FacilityWithStorageInfoViewModel> GetFacility(int id)
         {
             HttpResponseMessage response = await _httpClient.GetAsync($"api/facilities/{id}");
             response.EnsureSuccessStatusCode();
@@ -123,7 +125,7 @@ namespace FrontDeskApp.App.Services
                 FirstName = customer.FirstName
             };
             
-            HttpResponseMessage response = await _httpClient.PostAsync($"api/customers/{customer.Id}/update", new StringContent(JsonConvert.SerializeObject(request)));
+            HttpResponseMessage response = await _httpClient.PostAsync($"api/customers/{customer.Id}/update", new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json"));
             response.EnsureSuccessStatusCode();
             string responseBody = await response.Content.ReadAsStringAsync();
             var responseObject = JsonConvert.DeserializeObject<UpdateCustomerResponse>(responseBody);
@@ -140,10 +142,11 @@ namespace FrontDeskApp.App.Services
                 FacilityId = record.FacilityId,
                 CustomerId = record.CustomerId,
                 StoredOnUtc = record.StoredOnUtc,
-                RetrievedOnUtc = record.RetrievedOnUtc
+                RetrievedOnUtc = record.RetrievedOnUtc,
+                Data = record.Data
             };
             
-            HttpResponseMessage response = await _httpClient.PostAsync($"api/records/{record.Id}/update", new StringContent(JsonConvert.SerializeObject(request)));
+            HttpResponseMessage response = await _httpClient.PostAsync($"api/records/{record.Id}/update", new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json"));
             response.EnsureSuccessStatusCode();
             string responseBody = await response.Content.ReadAsStringAsync();
             var responseObject = JsonConvert.DeserializeObject<UpdateRecordResponse>(responseBody);

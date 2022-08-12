@@ -10,5 +10,6 @@ namespace FrontDeskApp.Common.Requests
         public BoxType BoxType { get; set; }
         public int FacilityId { get; set; }
         public int CustomerId { get; set; }
+        public string Data { get; set; }
     }
 }

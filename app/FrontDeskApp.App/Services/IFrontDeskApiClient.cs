@@ -11,7 +11,7 @@ namespace FrontDeskApp.App.Services
         public Task<bool> UpdateCustomer(Customer customer);
 
         public Task<IEnumerable<FacilityViewModel>> GetFacilities();
-        public Task<FacilityViewModel> GetFacility(int id);
+        public Task<FacilityWithStorageInfoViewModel> GetFacility(int id);
 
 
         public Task<IEnumerable<RecordViewModel>> GetRecords();

@@ -4,7 +4,8 @@
     {
         New,
         Stored,
+        Reserved,
         Retrieved,
-        Reserved
+        Cancelled
     }
 }

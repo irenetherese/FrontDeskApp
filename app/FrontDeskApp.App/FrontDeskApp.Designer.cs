@@ -28,24 +28,46 @@ partial class FrontDeskApp
     /// </summary>
     private void InitializeComponent()
     {
-            this.components = new System.ComponentModel.Container();
             this.btn1 = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
             this.btn3 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cCreateBtn = new System.Windows.Forms.Button();
+            this.cUpdateButton = new System.Windows.Forms.Button();
+            this.cId = new System.Windows.Forms.Label();
+            this.cLastNameValue = new System.Windows.Forms.TextBox();
+            this.cIdValue = new System.Windows.Forms.Label();
+            this.cLastName = new System.Windows.Forms.Label();
+            this.cFirstName = new System.Windows.Forms.Label();
+            this.cFirstNameValue = new System.Windows.Forms.TextBox();
+            this.cPhoneNumber = new System.Windows.Forms.Label();
+            this.cPhoneNumberValue = new System.Windows.Forms.TextBox();
+            this.cData = new System.Windows.Forms.Label();
+            this.cDataValue = new System.Windows.Forms.TextBox();
+            this.clearButton = new System.Windows.Forms.Button();
+            this.title = new System.Windows.Forms.Label();
+            this.fId = new System.Windows.Forms.Label();
+            this.fIdValue = new System.Windows.Forms.Label();
+            this.fName = new System.Windows.Forms.Label();
+            this.fNameValue = new System.Windows.Forms.Label();
+            this.fDataValue = new System.Windows.Forms.Label();
+            this.rFacilityNameValue = new System.Windows.Forms.Label();
+            this.rFacilityName = new System.Windows.Forms.Label();
+            this.rFacilityIdValue = new System.Windows.Forms.TextBox();
+            this.rFacilityId = new System.Windows.Forms.Label();
+            this.rCustomerNameValue = new System.Windows.Forms.Label();
+            this.rCustomerName = new System.Windows.Forms.Label();
+            this.rCustomerIdValue = new System.Windows.Forms.TextBox();
+            this.rCustomerId = new System.Windows.Forms.Label();
+            this.rIdValue = new System.Windows.Forms.Label();
+            this.rId = new System.Windows.Forms.Label();
+            this.rCreateButton = new System.Windows.Forms.Button();
+            this.rReserveButton = new System.Windows.Forms.Button();
+            this.rStoreButton = new System.Windows.Forms.Button();
+            this.rRetrieveButton = new System.Windows.Forms.Button();
+            this.rCancelButton = new System.Windows.Forms.Button();
+            this.rBoxType = new System.Windows.Forms.Label();
+            this.rBoxTypeValue = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,132 +105,360 @@ partial class FrontDeskApp
             this.dataGridView1.Size = new System.Drawing.Size(586, 170);
             this.dataGridView1.TabIndex = 3;
             // 
-            // button1
+            // cCreateBtn
             // 
-            this.button1.Location = new System.Drawing.Point(486, 393);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 45);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Create";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.cCreateBtn.Location = new System.Drawing.Point(634, 393);
+            this.cCreateBtn.Name = "cCreateBtn";
+            this.cCreateBtn.Size = new System.Drawing.Size(138, 45);
+            this.cCreateBtn.TabIndex = 4;
+            this.cCreateBtn.Text = "Create";
+            this.cCreateBtn.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // cUpdateButton
             // 
-            this.button2.Location = new System.Drawing.Point(634, 393);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(138, 45);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Update";
-            this.button2.UseVisualStyleBackColor = true;
+            this.cUpdateButton.Location = new System.Drawing.Point(634, 393);
+            this.cUpdateButton.Name = "cUpdateButton";
+            this.cUpdateButton.Size = new System.Drawing.Size(138, 45);
+            this.cUpdateButton.TabIndex = 5;
+            this.cUpdateButton.Text = "Update";
+            this.cUpdateButton.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // cId
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(91, 237);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 20);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Id: ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.cId.AutoSize = true;
+            this.cId.Location = new System.Drawing.Point(115, 261);
+            this.cId.Name = "cId";
+            this.cId.Size = new System.Drawing.Size(29, 20);
+            this.cId.TabIndex = 6;
+            this.cId.Text = "Id: ";
             // 
-            // textBox1
+            // cLastNameValue
             // 
-            this.textBox1.Location = new System.Drawing.Point(126, 268);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(254, 27);
-            this.textBox1.TabIndex = 7;
+            this.cLastNameValue.Location = new System.Drawing.Point(150, 292);
+            this.cLastNameValue.Name = "cLastNameValue";
+            this.cLastNameValue.Size = new System.Drawing.Size(241, 27);
+            this.cLastNameValue.TabIndex = 7;
             // 
-            // label2
+            // cIdValue
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(126, 237);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(25, 20);
-            this.label2.TabIndex = 8;
-            this.label2.Text = " --";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.cIdValue.AutoSize = true;
+            this.cIdValue.Location = new System.Drawing.Point(150, 261);
+            this.cIdValue.Name = "cIdValue";
+            this.cIdValue.Size = new System.Drawing.Size(25, 20);
+            this.cIdValue.TabIndex = 8;
+            this.cIdValue.Text = " --";
             // 
-            // label3
+            // cLastName
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 271);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 20);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Last Name: ";
+            this.cLastName.AutoSize = true;
+            this.cLastName.Location = new System.Drawing.Point(58, 295);
+            this.cLastName.Name = "cLastName";
+            this.cLastName.Size = new System.Drawing.Size(86, 20);
+            this.cLastName.TabIndex = 9;
+            this.cLastName.Text = "Last Name: ";
             // 
-            // label4
+            // cFirstName
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(34, 304);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 20);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "First Name: ";
+            this.cFirstName.AutoSize = true;
+            this.cFirstName.Location = new System.Drawing.Point(58, 328);
+            this.cFirstName.Name = "cFirstName";
+            this.cFirstName.Size = new System.Drawing.Size(87, 20);
+            this.cFirstName.TabIndex = 11;
+            this.cFirstName.Text = "First Name: ";
             // 
-            // textBox2
+            // cFirstNameValue
             // 
-            this.textBox2.Location = new System.Drawing.Point(126, 301);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(254, 27);
-            this.textBox2.TabIndex = 10;
+            this.cFirstNameValue.Location = new System.Drawing.Point(150, 325);
+            this.cFirstNameValue.Name = "cFirstNameValue";
+            this.cFirstNameValue.Size = new System.Drawing.Size(241, 27);
+            this.cFirstNameValue.TabIndex = 10;
             // 
-            // label5
+            // cPhoneNumber
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 337);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(115, 20);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Phone Number: ";
+            this.cPhoneNumber.AutoSize = true;
+            this.cPhoneNumber.Location = new System.Drawing.Point(30, 361);
+            this.cPhoneNumber.Name = "cPhoneNumber";
+            this.cPhoneNumber.Size = new System.Drawing.Size(115, 20);
+            this.cPhoneNumber.TabIndex = 13;
+            this.cPhoneNumber.Text = "Phone Number: ";
             // 
-            // textBox3
+            // cPhoneNumberValue
             // 
-            this.textBox3.Location = new System.Drawing.Point(126, 334);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(254, 27);
-            this.textBox3.TabIndex = 12;
+            this.cPhoneNumberValue.Location = new System.Drawing.Point(150, 358);
+            this.cPhoneNumberValue.Name = "cPhoneNumberValue";
+            this.cPhoneNumberValue.Size = new System.Drawing.Size(242, 27);
+            this.cPhoneNumberValue.TabIndex = 12;
             // 
-            // label6
+            // cData
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(415, 268);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 20);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Data: ";
+            this.cData.AutoSize = true;
+            this.cData.Location = new System.Drawing.Point(415, 292);
+            this.cData.Name = "cData";
+            this.cData.Size = new System.Drawing.Size(48, 20);
+            this.cData.TabIndex = 14;
+            this.cData.Text = "Data: ";
             // 
-            // textBox4
+            // cDataValue
             // 
-            this.textBox4.Location = new System.Drawing.Point(469, 268);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(303, 27);
-            this.textBox4.TabIndex = 15;
+            this.cDataValue.Location = new System.Drawing.Point(469, 292);
+            this.cDataValue.Name = "cDataValue";
+            this.cDataValue.Size = new System.Drawing.Size(303, 27);
+            this.cDataValue.TabIndex = 15;
             // 
-            // contextMenuStrip1
+            // clearButton
             // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.clearButton.Location = new System.Drawing.Point(37, 393);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(138, 45);
+            this.clearButton.TabIndex = 16;
+            this.clearButton.Text = "Clear";
+            this.clearButton.UseVisualStyleBackColor = true;
+            // 
+            // title
+            // 
+            this.title.AutoSize = true;
+            this.title.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.title.Location = new System.Drawing.Point(30, 234);
+            this.title.Name = "title";
+            this.title.Size = new System.Drawing.Size(77, 20);
+            this.title.TabIndex = 17;
+            this.title.Text = "Customer";
+            // 
+            // fId
+            // 
+            this.fId.AutoSize = true;
+            this.fId.Location = new System.Drawing.Point(115, 261);
+            this.fId.Name = "fId";
+            this.fId.Size = new System.Drawing.Size(29, 20);
+            this.fId.TabIndex = 18;
+            this.fId.Text = "Id: ";
+            // 
+            // fIdValue
+            // 
+            this.fIdValue.AutoSize = true;
+            this.fIdValue.Location = new System.Drawing.Point(145, 261);
+            this.fIdValue.Name = "fIdValue";
+            this.fIdValue.Size = new System.Drawing.Size(25, 20);
+            this.fIdValue.TabIndex = 19;
+            this.fIdValue.Text = " --";
+            // 
+            // fName
+            // 
+            this.fName.AutoSize = true;
+            this.fName.Location = new System.Drawing.Point(92, 295);
+            this.fName.Name = "fName";
+            this.fName.Size = new System.Drawing.Size(52, 20);
+            this.fName.TabIndex = 20;
+            this.fName.Text = "Name:";
+            // 
+            // fNameValue
+            // 
+            this.fNameValue.AutoSize = true;
+            this.fNameValue.Location = new System.Drawing.Point(150, 295);
+            this.fNameValue.Name = "fNameValue";
+            this.fNameValue.Size = new System.Drawing.Size(25, 20);
+            this.fNameValue.TabIndex = 21;
+            this.fNameValue.Text = " --";
+            // 
+            // fDataValue
+            // 
+            this.fDataValue.AutoSize = true;
+            this.fDataValue.Location = new System.Drawing.Point(469, 261);
+            this.fDataValue.MinimumSize = new System.Drawing.Size(305, 110);
+            this.fDataValue.Name = "fDataValue";
+            this.fDataValue.Size = new System.Drawing.Size(305, 110);
+            this.fDataValue.TabIndex = 22;
+            this.fDataValue.Text = "Capacity:";
+            // 
+            // rFacilityNameValue
+            // 
+            this.rFacilityNameValue.AutoSize = true;
+            this.rFacilityNameValue.Location = new System.Drawing.Point(518, 328);
+            this.rFacilityNameValue.Name = "rFacilityNameValue";
+            this.rFacilityNameValue.Size = new System.Drawing.Size(25, 20);
+            this.rFacilityNameValue.TabIndex = 34;
+            this.rFacilityNameValue.Text = " --";
+            // 
+            // rFacilityName
+            // 
+            this.rFacilityName.AutoSize = true;
+            this.rFacilityName.Location = new System.Drawing.Point(405, 328);
+            this.rFacilityName.Name = "rFacilityName";
+            this.rFacilityName.Size = new System.Drawing.Size(101, 20);
+            this.rFacilityName.TabIndex = 33;
+            this.rFacilityName.Text = "Facility Name:";
+            // 
+            // rFacilityIdValue
+            // 
+            this.rFacilityIdValue.Location = new System.Drawing.Point(518, 292);
+            this.rFacilityIdValue.Name = "rFacilityIdValue";
+            this.rFacilityIdValue.Size = new System.Drawing.Size(254, 27);
+            this.rFacilityIdValue.TabIndex = 32;
+            // 
+            // rFacilityId
+            // 
+            this.rFacilityId.AutoSize = true;
+            this.rFacilityId.Location = new System.Drawing.Point(434, 295);
+            this.rFacilityId.Name = "rFacilityId";
+            this.rFacilityId.Size = new System.Drawing.Size(78, 20);
+            this.rFacilityId.TabIndex = 31;
+            this.rFacilityId.Text = "Facility Id: ";
+            // 
+            // rCustomerNameValue
+            // 
+            this.rCustomerNameValue.AutoSize = true;
+            this.rCustomerNameValue.Location = new System.Drawing.Point(150, 328);
+            this.rCustomerNameValue.Name = "rCustomerNameValue";
+            this.rCustomerNameValue.Size = new System.Drawing.Size(25, 20);
+            this.rCustomerNameValue.TabIndex = 38;
+            this.rCustomerNameValue.Text = " --";
+            // 
+            // rCustomerName
+            // 
+            this.rCustomerName.AutoSize = true;
+            this.rCustomerName.Location = new System.Drawing.Point(25, 328);
+            this.rCustomerName.Name = "rCustomerName";
+            this.rCustomerName.Size = new System.Drawing.Size(119, 20);
+            this.rCustomerName.TabIndex = 37;
+            this.rCustomerName.Text = "Customer Name:";
+            // 
+            // rCustomerIdValue
+            // 
+            this.rCustomerIdValue.Location = new System.Drawing.Point(150, 292);
+            this.rCustomerIdValue.Name = "rCustomerIdValue";
+            this.rCustomerIdValue.Size = new System.Drawing.Size(241, 27);
+            this.rCustomerIdValue.TabIndex = 36;
+            // 
+            // rCustomerId
+            // 
+            this.rCustomerId.AutoSize = true;
+            this.rCustomerId.Location = new System.Drawing.Point(49, 295);
+            this.rCustomerId.Name = "rCustomerId";
+            this.rCustomerId.Size = new System.Drawing.Size(96, 20);
+            this.rCustomerId.TabIndex = 35;
+            this.rCustomerId.Text = "Customer Id: ";
+            // 
+            // rIdValue
+            // 
+            this.rIdValue.AutoSize = true;
+            this.rIdValue.Location = new System.Drawing.Point(146, 261);
+            this.rIdValue.Name = "rIdValue";
+            this.rIdValue.Size = new System.Drawing.Size(25, 20);
+            this.rIdValue.TabIndex = 40;
+            this.rIdValue.Text = " --";
+            // 
+            // rId
+            // 
+            this.rId.AutoSize = true;
+            this.rId.Location = new System.Drawing.Point(116, 261);
+            this.rId.Name = "rId";
+            this.rId.Size = new System.Drawing.Size(29, 20);
+            this.rId.TabIndex = 39;
+            this.rId.Text = "Id: ";
+            // 
+            // rCreateButton
+            // 
+            this.rCreateButton.Location = new System.Drawing.Point(634, 393);
+            this.rCreateButton.Name = "rCreateButton";
+            this.rCreateButton.Size = new System.Drawing.Size(138, 45);
+            this.rCreateButton.TabIndex = 41;
+            this.rCreateButton.Text = "Create";
+            this.rCreateButton.UseVisualStyleBackColor = true;
+            // 
+            // rReserveButton
+            // 
+            this.rReserveButton.Location = new System.Drawing.Point(469, 393);
+            this.rReserveButton.Name = "rReserveButton";
+            this.rReserveButton.Size = new System.Drawing.Size(138, 45);
+            this.rReserveButton.TabIndex = 42;
+            this.rReserveButton.Text = "Reserve";
+            this.rReserveButton.UseVisualStyleBackColor = true;
+            // 
+            // rStoreButton
+            // 
+            this.rStoreButton.Location = new System.Drawing.Point(634, 393);
+            this.rStoreButton.Name = "rStoreButton";
+            this.rStoreButton.Size = new System.Drawing.Size(138, 45);
+            this.rStoreButton.TabIndex = 43;
+            this.rStoreButton.Text = "Store";
+            this.rStoreButton.UseVisualStyleBackColor = true;
+            // 
+            // rRetrieveButton
+            // 
+            this.rRetrieveButton.Location = new System.Drawing.Point(635, 393);
+            this.rRetrieveButton.Name = "rRetrieveButton";
+            this.rRetrieveButton.Size = new System.Drawing.Size(138, 45);
+            this.rRetrieveButton.TabIndex = 44;
+            this.rRetrieveButton.Text = "Retrieve";
+            this.rRetrieveButton.UseVisualStyleBackColor = true;
+            // 
+            // rCancelButton
+            // 
+            this.rCancelButton.Location = new System.Drawing.Point(469, 393);
+            this.rCancelButton.Name = "rCancelButton";
+            this.rCancelButton.Size = new System.Drawing.Size(138, 45);
+            this.rCancelButton.TabIndex = 45;
+            this.rCancelButton.Text = "Cancel";
+            this.rCancelButton.UseVisualStyleBackColor = true;
+            // 
+            // rBoxType
+            // 
+            this.rBoxType.AutoSize = true;
+            this.rBoxType.Location = new System.Drawing.Point(434, 261);
+            this.rBoxType.Name = "rBoxType";
+            this.rBoxType.Size = new System.Drawing.Size(72, 20);
+            this.rBoxType.TabIndex = 46;
+            this.rBoxType.Text = "Box Type:";
+            // 
+            // rBoxTypeValue
+            // 
+            this.rBoxTypeValue.FormattingEnabled = true;
+            this.rBoxTypeValue.Location = new System.Drawing.Point(518, 258);
+            this.rBoxTypeValue.Name = "rBoxTypeValue";
+            this.rBoxTypeValue.Size = new System.Drawing.Size(151, 28);
+            this.rBoxTypeValue.TabIndex = 47;
             // 
             // FrontDeskApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.rBoxTypeValue);
+            this.Controls.Add(this.rBoxType);
+            this.Controls.Add(this.rCancelButton);
+            this.Controls.Add(this.rRetrieveButton);
+            this.Controls.Add(this.rStoreButton);
+            this.Controls.Add(this.rReserveButton);
+            this.Controls.Add(this.rCreateButton);
+            this.Controls.Add(this.rIdValue);
+            this.Controls.Add(this.rId);
+            this.Controls.Add(this.rCustomerNameValue);
+            this.Controls.Add(this.rCustomerName);
+            this.Controls.Add(this.rCustomerIdValue);
+            this.Controls.Add(this.rCustomerId);
+            this.Controls.Add(this.rFacilityNameValue);
+            this.Controls.Add(this.rFacilityName);
+            this.Controls.Add(this.rFacilityIdValue);
+            this.Controls.Add(this.rFacilityId);
+            this.Controls.Add(this.fDataValue);
+            this.Controls.Add(this.fNameValue);
+            this.Controls.Add(this.fName);
+            this.Controls.Add(this.fIdValue);
+            this.Controls.Add(this.fId);
+            this.Controls.Add(this.title);
+            this.Controls.Add(this.clearButton);
+            this.Controls.Add(this.cDataValue);
+            this.Controls.Add(this.cData);
+            this.Controls.Add(this.cPhoneNumber);
+            this.Controls.Add(this.cPhoneNumberValue);
+            this.Controls.Add(this.cFirstName);
+            this.Controls.Add(this.cFirstNameValue);
+            this.Controls.Add(this.cLastName);
+            this.Controls.Add(this.cIdValue);
+            this.Controls.Add(this.cLastNameValue);
+            this.Controls.Add(this.cId);
+            this.Controls.Add(this.cUpdateButton);
+            this.Controls.Add(this.cCreateBtn);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btn1);
             this.Controls.Add(this.btn2);
@@ -228,17 +478,40 @@ partial class FrontDeskApp
     #endregion
 
     private DataGridView dataGridView1;
-    private Button button1;
-    private Button button2;
-    private Label label1;
-    private TextBox textBox1;
-    private Label label2;
-    private Label label3;
-    private Label label4;
-    private TextBox textBox2;
-    private Label label5;
-    private TextBox textBox3;
-    private Label label6;
-    private TextBox textBox4;
-    private ContextMenuStrip contextMenuStrip1;
+    private Button cCreateBtn;
+    private Button cUpdateButton;
+    private Label cId;
+    private TextBox cLastNameValue;
+    private Label cIdValue;
+    private Label cLastName;
+    private Label cFirstName;
+    private TextBox cFirstNameValue;
+    private Label cPhoneNumber;
+    private TextBox cPhoneNumberValue;
+    private Label cData;
+    private TextBox cDataValue;
+    private Button clearButton;
+    private Label title;
+    private Label fId;
+    private Label fIdValue;
+    private Label fName;
+    private Label fNameValue;
+    private Label fDataValue;
+    private Label rFacilityNameValue;
+    private Label rFacilityName;
+    private TextBox rFacilityIdValue;
+    private Label rFacilityId;
+    private Label rCustomerNameValue;
+    private Label rCustomerName;
+    private TextBox rCustomerIdValue;
+    private Label rCustomerId;
+    private Label rIdValue;
+    private Label rId;
+    private Button rCreateButton;
+    private Button rReserveButton;
+    private Button rStoreButton;
+    private Button rRetrieveButton;
+    private Button rCancelButton;
+    private Label rBoxType;
+    private ComboBox rBoxTypeValue;
 }

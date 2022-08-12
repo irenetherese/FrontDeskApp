@@ -41,8 +41,20 @@ namespace FrontDeskApp.Repositories.EfCore
 
         public async Task<IEnumerable<Record>> GetAsync()
         {
-            return await _database.Records
+            var records =  await _database.Records
+                .Join(_database.Customers, r => r.CustomerId, c => c.Id, (r,c) => new { Record = r , Customer = c })
+                .Join(_database.Facilities, r => r.Record.FacilityId, f => f.Id, (r, f) => new { RecordCustomer = r, Facility = f })
                 .ToListAsync();
+
+            var list = new List<Record>();
+            foreach(var r in records)
+            {
+                r.RecordCustomer.Record.Customer = r.RecordCustomer.Customer;
+                r.RecordCustomer.Record.Facility = r.Facility;
+                list.Add(r.RecordCustomer.Record);
+            }
+
+            return list;
         }
 
         public async Task<IEnumerable<Record>> GetAsync(Expression<Func<Record, bool>> filter)

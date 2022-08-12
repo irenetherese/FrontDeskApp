@@ -12,5 +12,6 @@ namespace FrontDeskApp.Common.Requests
         public DateTime CreatedOnUtc { get; set; }
         public DateTime? StoredOnUtc { get; set; }
         public DateTime? RetrievedOnUtc { get; set; }
+        public string Data { get; set; }
     }
 }

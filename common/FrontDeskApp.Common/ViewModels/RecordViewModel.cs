@@ -14,5 +14,6 @@ namespace FrontDeskApp.Common.ViewModels
         public DateTime CreatedOn { get; set; }
         public DateTime? StoredOn { get; set; }
         public DateTime? RetrievedOn { get; set; }
+        public string Data { get; set; }
     }
 }
