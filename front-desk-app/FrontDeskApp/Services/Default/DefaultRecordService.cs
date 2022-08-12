@@ -7,16 +7,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Transactions;
+using System;
 
 namespace FrontDeskApp.Services.Default
 {
     public class DefaultRecordService : IRecordService
     {
         private readonly IRecordRepository _recordRepository;
+        private readonly IFacilityStorageInfoRepository _facilityStorageInfoRepository;
 
-        public DefaultRecordService(IRecordRepository recordRepository)
+        public DefaultRecordService(IRecordRepository recordRepository, IFacilityStorageInfoRepository facilityStorageInfoRepository)
         {
             _recordRepository = recordRepository;
+            _facilityStorageInfoRepository = facilityStorageInfoRepository;
         }
 
         public async Task<GetRecordsResponse> GetRecordsAsync(GetRecordsRequest request)
@@ -73,24 +76,42 @@ namespace FrontDeskApp.Services.Default
 
         public async Task<CreateRecordResponse> CreateRecordAsync(CreateRecordRequest request)
         {
-            var record = new Record
-            {
-                CustomerId = request.CustomerId,
-                FacilityId = request.FacilityId,
-                BoxType = request.BoxType,
-                Status = request.Status,
-                CreatedOnUtc = request.CreatedOnUtc,
-                StoredOnUtc = null,
-                RetrievedOnUtc = null,
-                Data = request.Data
-            };
+            var records = await _recordRepository.GetAsync(
+               r => r.FacilityId == request.FacilityId
+               && (r.Status == Status.Stored || r.Status == Status.Reserved || r.Status == Status.New)
+               && r.BoxType == request.BoxType);
 
-            var id = await _recordRepository.CreateAsync(record);
+            var facilityInfo = await _facilityStorageInfoRepository.GetAsync(request.FacilityId);
+            var facilityCapacity = facilityInfo.FirstOrDefault(f => f.BoxType == request.BoxType).Capacity;
 
-            return new CreateRecordResponse
+            if (records.Count() < facilityCapacity)
             {
-                Id = id
-            };
+                var record = new Record
+                {
+                    CustomerId = request.CustomerId,
+                    FacilityId = request.FacilityId,
+                    BoxType = request.BoxType,
+                    Status = request.Status,
+                    CreatedOnUtc = request.CreatedOnUtc,
+                    StoredOnUtc = null,
+                    RetrievedOnUtc = null,
+                    Data = request.Data
+                };
+
+                var id = await _recordRepository.CreateAsync(record);
+
+                return new CreateRecordResponse
+                {
+                    Id = id
+                };
+            }
+            else
+            {
+                return new CreateRecordResponse
+                {
+                    Id = 0
+                };
+            }
         }
 
         public async Task<UpdateRecordResponse> UpdateRecordAsync(int recordId, UpdateRecordRequest request)

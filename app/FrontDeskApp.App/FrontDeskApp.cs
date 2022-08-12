@@ -82,6 +82,12 @@ public partial class FrontDeskApp : Form
                     data += "\n\r\t" + $"-- {info.BoxType}: {info.Capacity}";
                 }
 
+                data += "\n\r\t\n\r\tCurrently Stored/Reserved:";
+                foreach (var info in facility.CurrentStorageInfo)
+                {
+                    data += "\n\r\t" + $"-- {info.BoxType}: {info.Quantity}";
+                }
+
                 fDataValue.Text = data;
             }
 
@@ -259,11 +265,19 @@ public partial class FrontDeskApp : Form
                 RetrievedOnUtc = null,
                 Data = "{}"
             };
-            await _apiClient.CreateRecord(record);
+            var response = await _apiClient.CreateRecord(record);
             await GetRecordData();
 
-            System.Windows.Forms.MessageBox.Show("Successfully created record.", "Success",
-            MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (response)
+            {
+                System.Windows.Forms.MessageBox.Show("Successfully created record.", "Success",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                System.Windows.Forms.MessageBox.Show("Cannot add record. Storage is already full / reserved.", "Error",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
     private async void rReserveButton_Click(object sender, EventArgs e) {
@@ -448,22 +462,35 @@ public partial class FrontDeskApp : Form
             rCustomerIdValue.Enabled = true;
             rFacilityIdValue.Enabled = true;
         }
+
+        else if (String.Equals(title.Text, "Facility"))
+        {
+            fIdValue.Text = "--";
+            fDataValue.Text = "Capacity:\n\r\t\n\r\tCurrently Stored/Reserved:";
+            fNameValue.Text = "";
+        }
     }
 
     private async Task GetCustomerData()
     {
         var customers = await _apiClient.GetCustomers();
         dataGridView1.DataSource = customers;
+
+        clearData();
     }
     private async Task GetFacilitiesData()
     {
         var facilities = await _apiClient.GetFacilities();
         dataGridView1.DataSource = facilities;
+
+        clearData();
     }
     private async Task GetRecordData()
     {
         var records = await _apiClient.GetRecords();
         dataGridView1.DataSource = records;
+
+        clearData();
     }
 
     private async void UpdateRecord(Status status)
@@ -525,7 +552,6 @@ public partial class FrontDeskApp : Form
         }
         await _apiClient.UpdateRecord(record);
         await GetRecordData();
-        clearData();
 
         System.Windows.Forms.MessageBox.Show("Successfully updated record.", "Success",
         MessageBoxButtons.OK, MessageBoxIcon.Information);

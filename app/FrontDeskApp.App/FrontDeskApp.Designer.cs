@@ -126,7 +126,7 @@ partial class FrontDeskApp
             // cId
             // 
             this.cId.AutoSize = true;
-            this.cId.Location = new System.Drawing.Point(115, 261);
+            this.cId.Location = new System.Drawing.Point(115, 248);
             this.cId.Name = "cId";
             this.cId.Size = new System.Drawing.Size(29, 20);
             this.cId.TabIndex = 6;
@@ -134,7 +134,7 @@ partial class FrontDeskApp
             // 
             // cLastNameValue
             // 
-            this.cLastNameValue.Location = new System.Drawing.Point(150, 292);
+            this.cLastNameValue.Location = new System.Drawing.Point(150, 279);
             this.cLastNameValue.Name = "cLastNameValue";
             this.cLastNameValue.Size = new System.Drawing.Size(241, 27);
             this.cLastNameValue.TabIndex = 7;
@@ -142,7 +142,7 @@ partial class FrontDeskApp
             // cIdValue
             // 
             this.cIdValue.AutoSize = true;
-            this.cIdValue.Location = new System.Drawing.Point(150, 261);
+            this.cIdValue.Location = new System.Drawing.Point(150, 248);
             this.cIdValue.Name = "cIdValue";
             this.cIdValue.Size = new System.Drawing.Size(25, 20);
             this.cIdValue.TabIndex = 8;
@@ -151,7 +151,7 @@ partial class FrontDeskApp
             // cLastName
             // 
             this.cLastName.AutoSize = true;
-            this.cLastName.Location = new System.Drawing.Point(58, 295);
+            this.cLastName.Location = new System.Drawing.Point(58, 282);
             this.cLastName.Name = "cLastName";
             this.cLastName.Size = new System.Drawing.Size(86, 20);
             this.cLastName.TabIndex = 9;
@@ -160,7 +160,7 @@ partial class FrontDeskApp
             // cFirstName
             // 
             this.cFirstName.AutoSize = true;
-            this.cFirstName.Location = new System.Drawing.Point(58, 328);
+            this.cFirstName.Location = new System.Drawing.Point(58, 315);
             this.cFirstName.Name = "cFirstName";
             this.cFirstName.Size = new System.Drawing.Size(87, 20);
             this.cFirstName.TabIndex = 11;
@@ -168,7 +168,7 @@ partial class FrontDeskApp
             // 
             // cFirstNameValue
             // 
-            this.cFirstNameValue.Location = new System.Drawing.Point(150, 325);
+            this.cFirstNameValue.Location = new System.Drawing.Point(150, 312);
             this.cFirstNameValue.Name = "cFirstNameValue";
             this.cFirstNameValue.Size = new System.Drawing.Size(241, 27);
             this.cFirstNameValue.TabIndex = 10;
@@ -176,7 +176,7 @@ partial class FrontDeskApp
             // cPhoneNumber
             // 
             this.cPhoneNumber.AutoSize = true;
-            this.cPhoneNumber.Location = new System.Drawing.Point(30, 361);
+            this.cPhoneNumber.Location = new System.Drawing.Point(30, 348);
             this.cPhoneNumber.Name = "cPhoneNumber";
             this.cPhoneNumber.Size = new System.Drawing.Size(115, 20);
             this.cPhoneNumber.TabIndex = 13;
@@ -184,7 +184,7 @@ partial class FrontDeskApp
             // 
             // cPhoneNumberValue
             // 
-            this.cPhoneNumberValue.Location = new System.Drawing.Point(150, 358);
+            this.cPhoneNumberValue.Location = new System.Drawing.Point(150, 345);
             this.cPhoneNumberValue.Name = "cPhoneNumberValue";
             this.cPhoneNumberValue.Size = new System.Drawing.Size(242, 27);
             this.cPhoneNumberValue.TabIndex = 12;
@@ -192,7 +192,7 @@ partial class FrontDeskApp
             // cData
             // 
             this.cData.AutoSize = true;
-            this.cData.Location = new System.Drawing.Point(415, 292);
+            this.cData.Location = new System.Drawing.Point(415, 279);
             this.cData.Name = "cData";
             this.cData.Size = new System.Drawing.Size(48, 20);
             this.cData.TabIndex = 14;
@@ -200,7 +200,7 @@ partial class FrontDeskApp
             // 
             // cDataValue
             // 
-            this.cDataValue.Location = new System.Drawing.Point(469, 292);
+            this.cDataValue.Location = new System.Drawing.Point(469, 279);
             this.cDataValue.Name = "cDataValue";
             this.cDataValue.Size = new System.Drawing.Size(303, 27);
             this.cDataValue.TabIndex = 15;
@@ -218,7 +218,7 @@ partial class FrontDeskApp
             // 
             this.title.AutoSize = true;
             this.title.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.title.Location = new System.Drawing.Point(30, 234);
+            this.title.Location = new System.Drawing.Point(30, 221);
             this.title.Name = "title";
             this.title.Size = new System.Drawing.Size(77, 20);
             this.title.TabIndex = 17;
@@ -227,7 +227,7 @@ partial class FrontDeskApp
             // fId
             // 
             this.fId.AutoSize = true;
-            this.fId.Location = new System.Drawing.Point(115, 261);
+            this.fId.Location = new System.Drawing.Point(115, 248);
             this.fId.Name = "fId";
             this.fId.Size = new System.Drawing.Size(29, 20);
             this.fId.TabIndex = 18;
@@ -236,7 +236,7 @@ partial class FrontDeskApp
             // fIdValue
             // 
             this.fIdValue.AutoSize = true;
-            this.fIdValue.Location = new System.Drawing.Point(145, 261);
+            this.fIdValue.Location = new System.Drawing.Point(145, 248);
             this.fIdValue.Name = "fIdValue";
             this.fIdValue.Size = new System.Drawing.Size(25, 20);
             this.fIdValue.TabIndex = 19;
@@ -245,7 +245,7 @@ partial class FrontDeskApp
             // fName
             // 
             this.fName.AutoSize = true;
-            this.fName.Location = new System.Drawing.Point(92, 295);
+            this.fName.Location = new System.Drawing.Point(92, 282);
             this.fName.Name = "fName";
             this.fName.Size = new System.Drawing.Size(52, 20);
             this.fName.TabIndex = 20;
@@ -254,7 +254,7 @@ partial class FrontDeskApp
             // fNameValue
             // 
             this.fNameValue.AutoSize = true;
-            this.fNameValue.Location = new System.Drawing.Point(150, 295);
+            this.fNameValue.Location = new System.Drawing.Point(150, 282);
             this.fNameValue.Name = "fNameValue";
             this.fNameValue.Size = new System.Drawing.Size(25, 20);
             this.fNameValue.TabIndex = 21;
@@ -263,7 +263,7 @@ partial class FrontDeskApp
             // fDataValue
             // 
             this.fDataValue.AutoSize = true;
-            this.fDataValue.Location = new System.Drawing.Point(469, 261);
+            this.fDataValue.Location = new System.Drawing.Point(469, 248);
             this.fDataValue.MinimumSize = new System.Drawing.Size(305, 110);
             this.fDataValue.Name = "fDataValue";
             this.fDataValue.Size = new System.Drawing.Size(305, 110);
@@ -273,7 +273,7 @@ partial class FrontDeskApp
             // rFacilityNameValue
             // 
             this.rFacilityNameValue.AutoSize = true;
-            this.rFacilityNameValue.Location = new System.Drawing.Point(518, 328);
+            this.rFacilityNameValue.Location = new System.Drawing.Point(518, 315);
             this.rFacilityNameValue.Name = "rFacilityNameValue";
             this.rFacilityNameValue.Size = new System.Drawing.Size(25, 20);
             this.rFacilityNameValue.TabIndex = 34;
@@ -282,7 +282,7 @@ partial class FrontDeskApp
             // rFacilityName
             // 
             this.rFacilityName.AutoSize = true;
-            this.rFacilityName.Location = new System.Drawing.Point(405, 328);
+            this.rFacilityName.Location = new System.Drawing.Point(405, 315);
             this.rFacilityName.Name = "rFacilityName";
             this.rFacilityName.Size = new System.Drawing.Size(101, 20);
             this.rFacilityName.TabIndex = 33;
@@ -290,7 +290,7 @@ partial class FrontDeskApp
             // 
             // rFacilityIdValue
             // 
-            this.rFacilityIdValue.Location = new System.Drawing.Point(518, 292);
+            this.rFacilityIdValue.Location = new System.Drawing.Point(518, 279);
             this.rFacilityIdValue.Name = "rFacilityIdValue";
             this.rFacilityIdValue.Size = new System.Drawing.Size(254, 27);
             this.rFacilityIdValue.TabIndex = 32;
@@ -298,7 +298,7 @@ partial class FrontDeskApp
             // rFacilityId
             // 
             this.rFacilityId.AutoSize = true;
-            this.rFacilityId.Location = new System.Drawing.Point(434, 295);
+            this.rFacilityId.Location = new System.Drawing.Point(434, 282);
             this.rFacilityId.Name = "rFacilityId";
             this.rFacilityId.Size = new System.Drawing.Size(78, 20);
             this.rFacilityId.TabIndex = 31;
@@ -307,7 +307,7 @@ partial class FrontDeskApp
             // rCustomerNameValue
             // 
             this.rCustomerNameValue.AutoSize = true;
-            this.rCustomerNameValue.Location = new System.Drawing.Point(150, 328);
+            this.rCustomerNameValue.Location = new System.Drawing.Point(150, 315);
             this.rCustomerNameValue.Name = "rCustomerNameValue";
             this.rCustomerNameValue.Size = new System.Drawing.Size(25, 20);
             this.rCustomerNameValue.TabIndex = 38;
@@ -316,7 +316,7 @@ partial class FrontDeskApp
             // rCustomerName
             // 
             this.rCustomerName.AutoSize = true;
-            this.rCustomerName.Location = new System.Drawing.Point(25, 328);
+            this.rCustomerName.Location = new System.Drawing.Point(25, 315);
             this.rCustomerName.Name = "rCustomerName";
             this.rCustomerName.Size = new System.Drawing.Size(119, 20);
             this.rCustomerName.TabIndex = 37;
@@ -324,7 +324,7 @@ partial class FrontDeskApp
             // 
             // rCustomerIdValue
             // 
-            this.rCustomerIdValue.Location = new System.Drawing.Point(150, 292);
+            this.rCustomerIdValue.Location = new System.Drawing.Point(150, 279);
             this.rCustomerIdValue.Name = "rCustomerIdValue";
             this.rCustomerIdValue.Size = new System.Drawing.Size(241, 27);
             this.rCustomerIdValue.TabIndex = 36;
@@ -332,7 +332,7 @@ partial class FrontDeskApp
             // rCustomerId
             // 
             this.rCustomerId.AutoSize = true;
-            this.rCustomerId.Location = new System.Drawing.Point(49, 295);
+            this.rCustomerId.Location = new System.Drawing.Point(49, 282);
             this.rCustomerId.Name = "rCustomerId";
             this.rCustomerId.Size = new System.Drawing.Size(96, 20);
             this.rCustomerId.TabIndex = 35;
@@ -341,7 +341,7 @@ partial class FrontDeskApp
             // rIdValue
             // 
             this.rIdValue.AutoSize = true;
-            this.rIdValue.Location = new System.Drawing.Point(146, 261);
+            this.rIdValue.Location = new System.Drawing.Point(146, 248);
             this.rIdValue.Name = "rIdValue";
             this.rIdValue.Size = new System.Drawing.Size(25, 20);
             this.rIdValue.TabIndex = 40;
@@ -350,7 +350,7 @@ partial class FrontDeskApp
             // rId
             // 
             this.rId.AutoSize = true;
-            this.rId.Location = new System.Drawing.Point(116, 261);
+            this.rId.Location = new System.Drawing.Point(116, 248);
             this.rId.Name = "rId";
             this.rId.Size = new System.Drawing.Size(29, 20);
             this.rId.TabIndex = 39;
@@ -404,7 +404,7 @@ partial class FrontDeskApp
             // rBoxType
             // 
             this.rBoxType.AutoSize = true;
-            this.rBoxType.Location = new System.Drawing.Point(434, 261);
+            this.rBoxType.Location = new System.Drawing.Point(434, 248);
             this.rBoxType.Name = "rBoxType";
             this.rBoxType.Size = new System.Drawing.Size(72, 20);
             this.rBoxType.TabIndex = 46;
@@ -413,7 +413,7 @@ partial class FrontDeskApp
             // rBoxTypeValue
             // 
             this.rBoxTypeValue.FormattingEnabled = true;
-            this.rBoxTypeValue.Location = new System.Drawing.Point(518, 258);
+            this.rBoxTypeValue.Location = new System.Drawing.Point(518, 245);
             this.rBoxTypeValue.Name = "rBoxTypeValue";
             this.rBoxTypeValue.Size = new System.Drawing.Size(151, 28);
             this.rBoxTypeValue.TabIndex = 47;

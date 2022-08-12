@@ -1,5 +1,7 @@
-﻿using FrontDeskApp.Common.Requests;
+﻿using FrontDeskApp.Common.Models;
+using FrontDeskApp.Common.Requests;
 using FrontDeskApp.Common.Responses;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace FrontDeskApp.Services
